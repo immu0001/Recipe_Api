@@ -37,7 +37,8 @@ ALLOWED_HOSTS.extend(
 
 
 # Application definition
-
+# rest_framework.authtoken --comes Built In with Django
+# But we need to enable it to use it.
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'rest_framework',
+    'rest_framework.authtoken'
     'drf_spectacular',
     'user',
 ]
