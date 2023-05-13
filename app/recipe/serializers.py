@@ -52,7 +52,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         tags = validated_data.pop('tags', None)
         if tags is not None:
             instance.tags.clear()
-            instance._get_or_create_tags(tags, instance)
+            self._get_or_create_tags(tags, instance)
 
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
